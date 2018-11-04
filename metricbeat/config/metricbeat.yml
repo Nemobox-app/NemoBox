@@ -25,6 +25,8 @@ metricbeat.modules:
 - module: mysql
   metricsets: ["status"]
   hosts:
+    - "root:${MYSQL_ROOT_PASSWORD}@tcp(411db:3306)/"
+    - "root:${MYSQL_ROOT_PASSWORD}@tcp(handeskdb:3306)/"
 
 - module: docker
   metricsets:
