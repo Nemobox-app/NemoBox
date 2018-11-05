@@ -21,12 +21,12 @@ metricbeat.config.modules:
 
 
 #==========================  Modules configuration ============================
-metricbeat.modules:
-- module: mysql
-  metricsets: ["status"]
-  hosts:
-    - "root:${MYSQL_ROOT_PASSWORD}@tcp(411db:3306)/"
-    - "root:${MYSQL_ROOT_PASSWORD}@tcp(handeskdb:3306)/"
+#metricbeat.modules:
+#- module: mysql
+#  metricsets: ["status"]
+#  hosts:
+#    - "root:${MYSQL_ROOT_PASSWORD}@tcp(411db:3306)/"
+#    - "root:${MYSQL_ROOT_PASSWORD}@tcp(handeskdb:3306)/"
 
 - module: docker
   metricsets:
@@ -119,7 +119,8 @@ setup.kibana:
 #-------------------------- Elasticsearch output ------------------------------
 output.elasticsearch:
   # Array of hosts to connect to.
-  hosts: ["elasticsearch:9200"]
+  hosts:
+    - "elasticsearch:9200"
 
   # Optional protocol and basic auth credentials.
   #protocol: "https"
