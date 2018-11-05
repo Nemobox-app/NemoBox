@@ -1,3 +1,4 @@
+#/bin/sh
 NEMOHOME="$( cd "$(dirname "$0")" ; pwd -P )"/../
 
 openssl req -x509 -batch -nodes -days 3650 -newkey rsa:4096\
