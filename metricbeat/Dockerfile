@@ -1,4 +1,4 @@
-FROM docker.elastic.co/beats/metricbeat:6.4.2
+FROM docker.elastic.co/beats/metricbeat:7.5.2
 USER root
 
 WORKDIR /usr/share/metricbeat
