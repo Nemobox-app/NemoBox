@@ -30,8 +30,6 @@ services:
     container_name: kibana
     image: docker.elastic.co/kibana/kibana:7.5.2
 #    image: docker.elastic.co/kibana/kibana-oss:7.5.2
-    environment:
-      elasticsearch.url: http://elasticsearch:9200
     restart: unless-stopped
     volumes:
       - ./kibana/config/:/usr/share/kibana/config:ro
